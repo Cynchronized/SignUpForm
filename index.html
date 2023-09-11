@@ -9,7 +9,15 @@
 <body>
     <div class="main">
         <div class="left">
-            <h1>Hi</h1>
+            <div class="odinImage">
+                <div class="semi-transparentBackground">
+                    <img src="./imgs/odin-lined.png" alt="Odin Logo">
+                    <h1 class="odinText">ODIN</h1>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Photo by <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank">Halie West</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+            </div>
         </div>
         <div class="right">
             <div class="top">
@@ -37,7 +45,6 @@
                            <div class="form-div">
                                <label for="password">PASSWORD</label>
                                <input type="text" id="password" name="password" required>
-                               <p id="errorMessage"></p>
                            </div>
                        </div>
                        <div class="form-divs">
@@ -54,9 +61,14 @@
                                <input type="password" id="confirmPassword" name="confirmPassword" required>
                            </div>
                        </div>
-               </div>
+                    </div>
                 </div>
-                <div class="bottom">sad</div>
+                <div class="bottom">
+                    <button type="submit" class="createAccount">Create Account</button>
+                    <div class="logIn">
+                        <p>Already have an account? <a href="">Log in</a></p>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

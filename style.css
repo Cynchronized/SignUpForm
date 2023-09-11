@@ -7,13 +7,18 @@
     --main-bg-color: #fafafa;
     --signup-bg-color: white;
     --border-color: #E5E7EB;
-    --focus-color: blue;
+    --focus-color: rgba(0, 0, 255, 0.7);
     --invalid-color: red;
+    --label-color: #444242;
+    --button-color: #596D48;
+    --image-bg-color: rgba(0, 0, 0, 0.6);
 }
 
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .main {
@@ -23,12 +28,55 @@ body {
     height: 100vh;
 }
 
+/* Left side of page */
+
 .left {
     background-image: url(./imgs/LeafyBackground.jpg);
     width: 35vw;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
+
+.odinImage {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p, .footer a, .odinText {
+    color: var(--main-bg-color);
+}
+
+
+.semi-transparentBackground {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--image-bg-color);
+}
+
+.odinText {
+    font-family: Norse-Bold, sans-serif;
+    font-size: 8rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+img {
+    height: 200px;
+}
+
+/* Right side of page */
 
 .right {
     display: flex;
@@ -49,12 +97,14 @@ body {
 .middle {
     height: 30vh;
     background-color: var(--signup-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
 }
 
 
 .encourageMessage {
     margin-left: 75px;
     font-size: 2rem;
+    padding-top: 30px;
 }
 
 .form-main-div {
@@ -68,24 +118,58 @@ body {
 .form-div {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 input {
     width: 300px;
     height: 30px;
-    border-color: var(--border-color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
 input:focus {
-    border: 3px solid var(--focus-color);
+    outline: none;
+    border: 1px solid var(--focus-color);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
 }
 
 input:invalid {
-    border: 3px solid var(--invalid-color);
+    border: 1px solid var(--invalid-color);
+}
+
+label {
+    font-size: 1rem;
+    color: var(--label-color);
+    font-weight: 500;
 }
 
 .bottom {
     height: 30vh;
+    margin-left: 75px;
+    margin-top: 40px;
 }
+
+.createAccount {
+    background-color: var(--button-color);
+    color: var(--main-bg-color);
+    border: 1px solid var(--button-color);
+    border-radius: 10px;
+    height: 50px;
+    width: 275px;
+    font-size: 1.25rem;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.logIn {
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+.logIn a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
