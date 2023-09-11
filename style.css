@@ -85,6 +85,8 @@ img {
     width: 65vw;
 }
 
+/* top third of content */
+
 .top {
     height: 40vh;
     display: flex;
@@ -93,6 +95,8 @@ img {
     margin-left: 5%;
     margin-bottom: 5%;
 }
+
+/* Main Form */
 
 .middle {
     height: 30vh;
@@ -118,7 +122,6 @@ img {
 .form-div {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 }
 
 input {
@@ -143,6 +146,8 @@ label {
     color: var(--label-color);
     font-weight: 500;
 }
+
+/* Bottom third of content */
 
 .bottom {
     height: 30vh;
@@ -171,5 +176,80 @@ label {
     color: var(--button-color);
     text-decoration: none;
     font-weight: 600;
+}
+
+/* Laptop */
+
+@media screen  and (max-width: 1024px){
+    input {
+        width: 250px;
+    }
+
+    img {
+        height: 150px;
+    }
+
+    .top h1 {
+        font-size: 1.5rem;
+    }
+}
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    input {
+        width: 150px;
+    }
+
+    .top h1 {
+        font-size: 1.25rem;
+    }
+
+    img {
+        height: 100px;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+    
+    .odinText {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    input {
+        width: 200px;
+    }
+
+    .createAccount {
+        width: 150px;
+    }
+
+    .encourageMessage, .form-main-div, .bottom {
+        margin-left: 25px;
+    }
+
+    img {
+        height: 50px;
+    }
+
+    .odinText {
+        font-size: 3rem;
+    }
+
+    .top {
+        height: 30vh;
+    }
+
+    .middle {
+        height: 40vh;
+    }
+
+    .form-main-div {
+        flex-direction: column;
+    }
+
+    
 }
 
